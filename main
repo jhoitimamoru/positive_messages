@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de Privacidade - Positive Message</title>
+  <meta name="description" content="Política de Privacidade do aplicativo Positive Message.">
+  <style>
+    :root {
+      --bg-1: #fff7ef;
+      --bg-2: #eef7ff;
+      --card: rgba(255, 255, 255, 0.88);
+      --text: #1f2937;
+      --muted: #4b5563;
+      --brand: #ef6b3f;
+      --brand-2: #2973b2;
+      --ok: #1f8a5b;
+      --line: #e5e7eb;
+      --shadow: 0 12px 28px rgba(17, 24, 39, 0.1);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      color: var(--text);
+      background:
+        radial-gradient(1100px 600px at -8% -10%, #ffd8b8 0%, transparent 60%),
+        radial-gradient(900px 520px at 108% -12%, #c7e7ff 0%, transparent 55%),
+        linear-gradient(160deg, var(--bg-1), var(--bg-2));
+      font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+      line-height: 1.65;
+    }
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 18px 54px;
+      animation: fadeIn 500ms ease-out;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(239, 107, 63, 0.14), rgba(41, 115, 178, 0.16));
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      box-shadow: var(--shadow);
+      border-radius: 24px;
+      padding: 30px 26px;
+      backdrop-filter: blur(4px);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.7rem, 2.8vw, 2.5rem);
+      letter-spacing: 0.2px;
+      line-height: 1.2;
+      color: #172033;
+    }
+
+    .subtitle {
+      margin: 14px 0 0;
+      color: var(--muted);
+      max-width: 70ch;
+      font-size: 1.02rem;
+    }
+
+    .meta {
+      margin-top: 14px;
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      color: #243047;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.74);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 0.92rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+
+    .kpi {
+      grid-column: span 4;
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.92);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px;
+      min-height: 110px;
+    }
+
+    .kpi h3 {
+      margin: 0 0 8px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--muted);
+    }
+
+    .kpi p {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #152238;
+    }
+
+    section {
+      margin-top: 20px;
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.92);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px 20px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.2rem;
+      color: #172033;
+    }
+
+    p {
+      margin: 0 0 10px;
+      color: #273142;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 7px 0;
+      color: #273142;
+    }
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 8px;
+      font-size: 0.95rem;
+    }
+
+    .table th, .table td {
+      border-bottom: 1px solid var(--line);
+      padding: 11px 12px;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    .table th {
+      background: #f8fafc;
+      color: #1f2a3f;
+      font-size: 0.86rem;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #edf7f1;
+      color: var(--ok);
+      border: 1px solid #cde8d8;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-left: 6px;
+    }
+
+    .note {
+      margin-top: 8px;
+      border-left: 4px solid var(--brand-2);
+      padding: 10px 12px;
+      background: rgba(41, 115, 178, 0.08);
+      border-radius: 8px;
+      color: #1f3550;
+      font-size: 0.95rem;
+    }
+
+    .footer {
+      margin-top: 16px;
+      color: #334155;
+      font-size: 0.95rem;
+      text-align: center;
+      padding: 8px;
+    }
+
+    code {
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      padding: 1px 6px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 880px) {
+      .kpi {
+        grid-column: span 6;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .wrap {
+        padding: 14px 12px 30px;
+      }
+
+      .hero {
+        padding: 22px 16px;
+      }
+
+      section {
+        padding: 18px 14px;
+      }
+
+      .kpi {
+        grid-column: span 12;
+      }
+
+      .table {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <h1>Política de Privacidade do Positive Message</h1>
+      <p class="subtitle">
+        Esta Política descreve como o aplicativo Positive Message coleta, usa, armazena e protege informações.
+        O foco do app é entregar mensagens positivas e uma experiência personalizada com o mínimo possível de dados.
+      </p>
+      <div class="meta">Última atualização: 09 de agosto de 2026</div>
+      <div class="grid">
+        <article class="kpi">
+          <h3>Conta</h3>
+          <p>Não exige cadastro com e-mail ou senha.</p>
+        </article>
+        <article class="kpi">
+          <h3>Identificação</h3>
+          <p>Usa ID anônimo do Firebase para funcionamento interno.</p>
+        </article>
+        <article class="kpi">
+          <h3>Controle do usuário</h3>
+          <p>Você pode desativar notificações e limpar dados locais no aparelho.</p>
+        </article>
+      </div>
+    </header>
+
+    <section>
+      <h2>1. Quem somos</h2>
+      <p>
+        O Positive Message é um aplicativo de afirmações e mensagens inspiradoras. Esta Política se aplica ao uso do app em dispositivos Android e iOS.
+      </p>
+    </section>
+
+    <section>
+      <h2>2. Quais dados tratamos</h2>
+      <table class="table" aria-label="Dados tratados pelo aplicativo">
+        <thead>
+          <tr>
+            <th>Categoria</th>
+            <th>Exemplos</th>
+            <th>Finalidade</th>
+            <th>Base de funcionamento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Identificador técnico anônimo</td>
+            <td>ID interno do Firebase Authentication (anônimo)</td>
+            <td>Associar perfil e estatísticas sem exigir conta com dados pessoais</td>
+            <td>Execução do serviço</td>
+          </tr>
+          <tr>
+            <td>Preferências do app</td>
+            <td>Idioma, tema, categoria selecionada, favoritos, mensagens customizadas, configuração de lembretes</td>
+            <td>Personalização e continuidade da experiência no mesmo aparelho</td>
+            <td>Execução do serviço</td>
+          </tr>
+          <tr>
+            <td>Dados de uso agregados</td>
+            <td>Contadores de instalações, onboarding concluído, origem de aquisição, faixa etária informada, usuários ativos por dia</td>
+            <td>Medição de desempenho do aplicativo em nível agregado</td>
+            <td>Interesse legítimo do operador</td>
+          </tr>
+          <tr>
+            <td>Permissão de notificação <span class="badge">Opcional</span></td>
+            <td>Autorização do sistema para mostrar lembretes</td>
+            <td>Enviar notificações locais programadas por você</td>
+            <td>Consentimento no dispositivo</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="note">
+        O app não solicita nome, CPF, e-mail, telefone, endereço ou documento de identificação para uso básico.
+      </p>
+    </section>
+
+    <section>
+      <h2>3. Como os dados são coletados</h2>
+      <ul>
+        <li>Diretamente no dispositivo, quando você escolhe tema, idioma, favoritos e preferências.</li>
+        <li>Durante o uso, por meio de eventos internos necessários para funcionamento (ex.: atualização de sequência diária).</li>
+        <li>Por serviços de infraestrutura usados no app (Firebase Authentication anônimo e Cloud Firestore).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Uso de Firebase e provedores terceiros</h2>
+      <p>Para operar o app com estabilidade e métricas técnicas, utilizamos serviços do Google Firebase:</p>
+      <ul>
+        <li><strong>Firebase Authentication (anônimo):</strong> gera um identificador técnico para cada instalação do app.</li>
+        <li><strong>Cloud Firestore:</strong> armazena perfil técnico e contadores agregados de uso.</li>
+      </ul>
+      <p>
+        Também utilizamos tradução local no aparelho com modelos de linguagem embarcados (ML Kit on-device). Esses modelos podem ser baixados para funcionamento offline da tradução no idioma escolhido.
+      </p>
+      <p>
+        Os dados podem ser processados em infraestrutura global desses provedores conforme seus termos e políticas.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. Notificações</h2>
+      <ul>
+        <li>As notificações são locais (no próprio dispositivo) e são configuradas de acordo com suas preferências de horário e frequência.</li>
+        <li>Você pode negar ou revogar a permissão de notificações a qualquer momento nas configurações do sistema.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. Compartilhamento de mensagens</h2>
+      <p>
+        O compartilhamento de frases ocorre apenas quando você aciona a função de compartilhar. O app não envia automaticamente suas mensagens para contatos ou redes sociais.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. Retenção e descarte</h2>
+      <ul>
+        <li><strong>No dispositivo:</strong> preferências e conteúdo local permanecem até você limpar os dados do app ou desinstalar.</li>
+        <li><strong>Na nuvem:</strong> dados técnicos e agregados podem permanecer para continuidade operacional e histórico estatístico.</li>
+      </ul>
+      <p>
+        Como a identificação é anônima, a exclusão individual depende de informações técnicas suficientes para localizar o registro (por exemplo, ID anônimo da instalação, quando disponível).
+      </p>
+    </section>
+
+    <section>
+      <h2>8. Segurança</h2>
+      <p>
+        Adotamos medidas técnicas e organizacionais razoáveis para proteger dados contra acesso não autorizado, alteração indevida, divulgação ou destruição. No entanto, nenhum método de transmissão ou armazenamento é 100% infalível.
+      </p>
+    </section>
+
+    <section>
+      <h2>9. Direitos do titular e solicitações</h2>
+      <p>
+        Se você quiser solicitar esclarecimentos, atualização, correção ou exclusão de dados aplicável ao seu caso, entre em contato:
+      </p>
+      <ul>
+        <li>E-mail de suporte/privacidade: <strong>jhoitimamoru@gmail.com</strong></li>
+      </ul>
+      <p>
+        Para ajudar na análise, inclua no contato: versão do app, plataforma (Android ou iOS) e detalhes do pedido.
+      </p>
+    </section>
+
+    <section>
+      <h2>10. Crianças e adolescentes</h2>
+      <p>
+        O app é de bem-estar e mensagens motivacionais. Quando aplicável por lei local, recomenda-se supervisão de responsáveis para menores de idade.
+      </p>
+    </section>
+
+    <section>
+      <h2>11. Alterações desta Política</h2>
+      <p>
+        Esta Política pode ser atualizada para refletir melhorias no app, exigências legais ou mudanças técnicas. A data da última atualização será sempre revisada no topo desta página.
+      </p>
+    </section>
+
+    <p class="footer">
+      Positive Message - Política de Privacidade
+    </p>
+  </main>
+</body>
+</html>
