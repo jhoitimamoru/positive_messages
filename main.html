@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Política de Privacidade - Positive Message</title>
-  <meta name="description" content="Política de Privacidade do aplicativo Positive Message.">
+  <title>Privacy Policy - Positive Message</title>
+  <meta name="description" content="Privacy Policy for the Positive Message app.">
   <style>
     :root {
       --bg-1: #fff7ef;
@@ -241,16 +241,261 @@
       }
     }
   </style>
+  
+  <style>
+    .langbar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .langbar button {
+      font: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 7px 16px;
+      cursor: pointer;
+      transition: color 140ms ease, background 140ms ease, border-color 140ms ease;
+    }
+    .langbar button:hover { color: var(--text); }
+    .langbar button[aria-pressed="true"] {
+      color: #fff;
+      background: var(--brand-2);
+      border-color: var(--brand-2);
+    }
+    [data-lang] { display: none; }
+    [data-lang].on { display: block; }
+  </style>
 </head>
 <body>
   <main class="wrap">
-    <header class="hero">
+    <div class="langbar">
+      <button type="button" data-set="en" aria-pressed="true">English</button>
+      <button type="button" data-set="pt" aria-pressed="false">Português</button>
+    </div>
+
+    <div data-lang="en" class="on">
+      <div class="hero">
+      <h1>Positive Message Privacy Policy</h1>
+      <p class="subtitle">
+        This Policy describes how the Positive Message app collects, uses,
+        stores and protects information. The app aims to deliver positive
+        messages and a personalised experience on as little data as possible.
+      </p>
+      <p class="meta">Last updated: 29 August 2026</p>
+      <div class="grid">
+        <div class="kpi"><h3>Account</h3><p>No sign-up with e-mail or password.</p></div>
+        <div class="kpi"><h3>Identification</h3><p>An anonymous Firebase ID, for internal use.</p></div>
+        <div class="kpi"><h3>Your control</h3><p>Turn off notifications and clear local data on the device.</p></div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>1. Who we are</h2>
+      <p>
+        Positive Message is an app of affirmations and inspiring messages. This
+        Policy applies to use of the app on Android and iOS devices.
+      </p>
+
+      <h2>2. What data we process</h2>
+      <table class="table" aria-label="Data processed by the app">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Examples</th>
+            <th>Purpose</th>
+            <th>Basis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Anonymous technical identifier</td>
+            <td>Internal Firebase Authentication ID (anonymous)</td>
+            <td>Authorise the writing of aggregate statistics without requiring an account with personal data</td>
+            <td>Service delivery</td>
+          </tr>
+          <tr>
+            <td>App preferences</td>
+            <td>Language, theme, selected category, favourites, custom affirmations, reminder settings</td>
+            <td>Personalisation and continuity of the experience on the same device</td>
+            <td>Service delivery</td>
+          </tr>
+          <tr>
+            <td>Aggregate usage data</td>
+            <td>Counters for installs, completed onboarding, acquisition source, language, daily active users</td>
+            <td>Measuring app performance at an aggregate level</td>
+            <td>Legitimate interest</td>
+          </tr>
+          <tr>
+            <td>Usage events and analytics identifier</td>
+            <td>App opens, screens visited, theme chosen, sharing, favouriting, language, approximate country, app version and device model, collected by Google Analytics for Firebase against an installation identifier</td>
+            <td>Understanding how the app is used and where to improve it</td>
+            <td>Legitimate interest</td>
+          </tr>
+          <tr>
+            <td>Notification permission <span class="badge">Optional</span></td>
+            <td>System authorisation to show reminders</td>
+            <td>Sending the local notifications you scheduled</td>
+            <td>Consent on the device</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="note">
+        The app does not ask for your name, e-mail, phone number, address or
+        any identity document in order to work.
+      </p>
+
+      <h2>3. How data is collected</h2>
+      <ul>
+        <li>Directly on the device, when you choose a theme, language,
+        favourites and preferences.</li>
+        <li>During use, through internal events the app needs to function
+        (for example, updating your daily streak).</li>
+        <li>Through the infrastructure services the app uses (anonymous
+        Firebase Authentication, Cloud Firestore and Google Analytics for
+        Firebase).</li>
+      </ul>
+
+      <h2>4. Firebase and third-party providers</h2>
+      <p>
+        To run the app reliably and measure it technically, we use Google
+        Firebase services:
+      </p>
+      <ul>
+        <li><strong>Firebase Authentication (anonymous):</strong> generates a
+        technical identifier for each installation of the app.</li>
+        <li><strong>Cloud Firestore:</strong> stores aggregate usage counters.
+        We keep no individual record of what any one person does in the
+        app.</li>
+        <li><strong>Google Analytics for Firebase:</strong> records usage
+        events (opens, screens, sharing, theme chosen) against an installation
+        identifier. We do not use this data for advertising, do not combine it
+        with advertising identifiers and do not share it with third parties.
+        The affirmations you write are never sent.</li>
+      </ul>
+      <p>
+        We also translate on the device using embedded language models (ML Kit
+        on-device). These models may be downloaded so translation works
+        offline in your chosen language.
+      </p>
+      <p>
+        Data may be processed on those providers' global infrastructure under
+        their own terms and policies.
+      </p>
+
+      <h2>5. Purchases and subscriptions</h2>
+      <p>
+        Positive Message offers a Premium version as a subscription (monthly or
+        annual) and as a one-time purchase (lifetime). <strong>All payment is
+        processed by Google Play</strong> — the app does not collect, see or
+        store your card details or any payment information.
+      </p>
+      <ul>
+        <li><strong>What we receive:</strong> only the confirmation that an
+        active purchase exists for your account, used to unlock Premium
+        content on the device.</li>
+        <li><strong>What we do not receive:</strong> name, address, card
+        details, payment history or any financial information.</li>
+        <li><strong>Where that data lives:</strong> with Google, under its own
+        privacy policy. The app stores nothing on the device beyond a flag
+        saying Premium is active.</li>
+      </ul>
+      <p>
+        <strong>Renewal and cancellation.</strong> Subscriptions renew
+        automatically at the end of each period unless cancelled. Cancelling is
+        done through Google Play — in <em>Play Store &rsaquo; Payments and
+        subscriptions &rsaquo; Subscriptions</em> — or through the "Manage
+        subscription" shortcut inside the app. Cancelling stops future charges;
+        access continues until the end of the period already paid for. The
+        lifetime purchase is one-off and does not renew.
+      </p>
+      <p>
+        <strong>Free trial.</strong> Where a free trial is offered, its length
+        and the date of the first charge are shown on the subscription screen
+        before you confirm. Cancelling before the trial ends avoids any charge.
+      </p>
+      <p>
+        <strong>Refunds</strong> follow Google Play's policy and must be
+        requested there.
+      </p>
+
+      <h2>6. Notifications</h2>
+      <ul>
+        <li>Notifications are local (on the device itself) and are scheduled
+        according to your own time and frequency preferences.</li>
+        <li>You can refuse or revoke notification permission at any time in
+        your system settings.</li>
+      </ul>
+
+      <h2>7. Sharing affirmations</h2>
+      <p>
+        Sharing happens only when you tap share. The app never sends your
+        affirmations to contacts or social networks on its own.
+      </p>
+
+      <h2>8. Retention and deletion</h2>
+      <ul>
+        <li><strong>On the device:</strong> preferences and local content
+        remain until you clear the app's data or uninstall it.</li>
+        <li><strong>In the cloud:</strong> technical and aggregate data may be
+        kept for operational continuity and statistical history.</li>
+      </ul>
+      <p>
+        The cloud counters are aggregate and hold no individual record, so
+        there is no profile of you to locate or delete. Google Analytics events
+        are retained for the period configured in the service and can be
+        stopped at any time by uninstalling the app or clearing its data.
+      </p>
+
+      <h2>9. Security</h2>
+      <p>
+        We take reasonable technical and organisational measures to protect
+        data against unauthorised access, improper alteration, disclosure or
+        destruction. That said, no method of transmission or storage is
+        completely infallible.
+      </p>
+
+      <h2>10. Your rights and requests</h2>
+      <p>
+        If you would like clarification, an update, a correction or the
+        deletion of data applicable to your case, get in touch:
+      </p>
+      <ul>
+        <li>Support and privacy e-mail:
+        <a href="mailto:jhoitimamoru@gmail.com">jhoitimamoru@gmail.com</a></li>
+      </ul>
+      <p>
+        To help us look into it, please include the app version, the platform
+        (Android or iOS) and details of your request.
+      </p>
+
+      <h2>11. Children and teenagers</h2>
+      <p>
+        This is a wellbeing and motivational messages app. Where local law
+        applies, parental supervision is recommended for minors.
+      </p>
+
+      <h2>12. Changes to this Policy</h2>
+      <p>
+        This Policy may be updated to reflect improvements to the app, legal
+        requirements or technical changes. The date of the last update is
+        always revised at the top of this page.
+      </p>
+    </div>
+    <p class="footer">Positive Message - Privacy Policy</p>
+    </div>
+
+    <div data-lang="pt">
+      <header class="hero">
       <h1>Política de Privacidade do Positive Message</h1>
       <p class="subtitle">
         Esta Política descreve como o aplicativo Positive Message coleta, usa, armazena e protege informações.
         O foco do app é entregar mensagens positivas e uma experiência personalizada com o mínimo possível de dados.
       </p>
-      <div class="meta">Última atualização: 09 de agosto de 2026</div>
+      <div class="meta">Última atualização: 29 de agosto de 2026</div>
       <div class="grid">
         <article class="kpi">
           <h3>Conta</h3>
@@ -289,7 +534,7 @@
           <tr>
             <td>Identificador técnico anônimo</td>
             <td>ID interno do Firebase Authentication (anônimo)</td>
-            <td>Associar perfil e estatísticas sem exigir conta com dados pessoais</td>
+            <td>Autorizar a gravação das estatísticas agregadas sem exigir conta com dados pessoais</td>
             <td>Execução do serviço</td>
           </tr>
           <tr>
@@ -300,8 +545,14 @@
           </tr>
           <tr>
             <td>Dados de uso agregados</td>
-            <td>Contadores de instalações, onboarding concluído, origem de aquisição, faixa etária informada, usuários ativos por dia</td>
+            <td>Contadores de instalações, onboarding concluído, origem de aquisição, idioma, usuários ativos por dia</td>
             <td>Medição de desempenho do aplicativo em nível agregado</td>
+            <td>Interesse legítimo do operador</td>
+          </tr>
+          <tr>
+            <td>Eventos de uso e identificador de análise</td>
+            <td>Abertura do app, telas visitadas, tema escolhido, compartilhamento, favoritar, idioma, país aproximado, versão do app e modelo do aparelho, coletados pelo Google Analytics para Firebase com um identificador de instalação</td>
+            <td>Entender como o app é usado e onde melhorá-lo</td>
             <td>Interesse legítimo do operador</td>
           </tr>
           <tr>
@@ -322,7 +573,7 @@
       <ul>
         <li>Diretamente no dispositivo, quando você escolhe tema, idioma, favoritos e preferências.</li>
         <li>Durante o uso, por meio de eventos internos necessários para funcionamento (ex.: atualização de sequência diária).</li>
-        <li>Por serviços de infraestrutura usados no app (Firebase Authentication anônimo e Cloud Firestore).</li>
+        <li>Por serviços de infraestrutura usados no app (Firebase Authentication anônimo, Cloud Firestore e Google Analytics para Firebase).</li>
       </ul>
     </section>
 
@@ -331,7 +582,8 @@
       <p>Para operar o app com estabilidade e métricas técnicas, utilizamos serviços do Google Firebase:</p>
       <ul>
         <li><strong>Firebase Authentication (anônimo):</strong> gera um identificador técnico para cada instalação do app.</li>
-        <li><strong>Cloud Firestore:</strong> armazena perfil técnico e contadores agregados de uso.</li>
+        <li><strong>Cloud Firestore:</strong> armazena contadores agregados de uso. Não guardamos registro individual do que cada pessoa faz no app.</li>
+        <li><strong>Google Analytics para Firebase:</strong> registra eventos de uso (abertura, telas, compartilhamento, tema escolhido) associados a um identificador de instalação. Não usamos esses dados para publicidade, não os cruzamos com identificadores de anúncio e não os compartilhamos com terceiros. O conteúdo das afirmações que você escreve nunca é enviado.</li>
       </ul>
       <p>
         Também utilizamos tradução local no aparelho com modelos de linguagem embarcados (ML Kit on-device). Esses modelos podem ser baixados para funcionamento offline da tradução no idioma escolhido.
@@ -342,7 +594,44 @@
     </section>
 
     <section>
-      <h2>5. Notificações</h2>
+      <h2>5. Compras e assinaturas</h2>
+      <p>
+        O Positive Message oferece uma versão Premium por assinatura (mensal ou
+        anual) e por compra única (vitalícia). <strong>Todo o pagamento é
+        processado pelo Google Play</strong> — o app não coleta, não vê e não
+        armazena dados do seu cartão ou de qualquer meio de pagamento.
+      </p>
+      <ul>
+        <li><strong>O que recebemos:</strong> apenas a confirmação de que existe
+        uma compra ativa para a sua conta, usada para liberar o conteúdo
+        Premium no aparelho.</li>
+        <li><strong>O que não recebemos:</strong> nome, endereço, dados de
+        cartão, histórico de pagamentos ou qualquer informação financeira.</li>
+        <li><strong>Onde ficam esses dados:</strong> com o Google, sob a
+        política de privacidade dele. O app guarda no próprio aparelho apenas
+        um indicador de que a versão Premium está ativa.</li>
+      </ul>
+      <p>
+        <strong>Renovação e cancelamento.</strong> As assinaturas renovam
+        automaticamente ao fim de cada período, a menos que sejam canceladas.
+        O cancelamento é feito pela Google Play — em
+        <em>Play Store &rsaquo; Pagamentos e assinaturas &rsaquo;
+        Assinaturas</em> — ou pelo atalho "Gerenciar assinatura" dentro do
+        próprio app. Cancelar interrompe as cobranças futuras; o acesso segue
+        até o fim do período já pago. A compra vitalícia é única e não renova.
+      </p>
+      <p>
+        <strong>Período de teste.</strong> Quando houver um teste gratuito, a
+        duração e a data da primeira cobrança são mostradas na tela de
+        assinatura antes da confirmação. Cancelar antes do fim do teste evita
+        qualquer cobrança.
+      </p>
+      <p>
+        <strong>Reembolsos</strong> seguem a política da Google Play e devem
+        ser solicitados por lá.
+      </p>
+
+      <h2>6. Notificações</h2>
       <ul>
         <li>As notificações são locais (no próprio dispositivo) e são configuradas de acordo com suas preferências de horário e frequência.</li>
         <li>Você pode negar ou revogar a permissão de notificações a qualquer momento nas configurações do sistema.</li>
@@ -350,32 +639,32 @@
     </section>
 
     <section>
-      <h2>6. Compartilhamento de mensagens</h2>
+      <h2>7. Compartilhamento de mensagens</h2>
       <p>
         O compartilhamento de frases ocorre apenas quando você aciona a função de compartilhar. O app não envia automaticamente suas mensagens para contatos ou redes sociais.
       </p>
     </section>
 
     <section>
-      <h2>7. Retenção e descarte</h2>
+      <h2>8. Retenção e descarte</h2>
       <ul>
         <li><strong>No dispositivo:</strong> preferências e conteúdo local permanecem até você limpar os dados do app ou desinstalar.</li>
         <li><strong>Na nuvem:</strong> dados técnicos e agregados podem permanecer para continuidade operacional e histórico estatístico.</li>
       </ul>
       <p>
-        Como a identificação é anônima, a exclusão individual depende de informações técnicas suficientes para localizar o registro (por exemplo, ID anônimo da instalação, quando disponível).
+        Os contadores na nuvem são agregados e não guardam registro individual, então não há um perfil seu a ser localizado ou excluído. Os eventos do Google Analytics são retidos pelo prazo configurado no serviço e podem ser interrompidos a qualquer momento desinstalando o app ou limpando os dados dele.
       </p>
     </section>
 
     <section>
-      <h2>8. Segurança</h2>
+      <h2>9. Segurança</h2>
       <p>
         Adotamos medidas técnicas e organizacionais razoáveis para proteger dados contra acesso não autorizado, alteração indevida, divulgação ou destruição. No entanto, nenhum método de transmissão ou armazenamento é 100% infalível.
       </p>
     </section>
 
     <section>
-      <h2>9. Direitos do titular e solicitações</h2>
+      <h2>10. Direitos do titular e solicitações</h2>
       <p>
         Se você quiser solicitar esclarecimentos, atualização, correção ou exclusão de dados aplicável ao seu caso, entre em contato:
       </p>
@@ -388,14 +677,14 @@
     </section>
 
     <section>
-      <h2>10. Crianças e adolescentes</h2>
+      <h2>11. Crianças e adolescentes</h2>
       <p>
         O app é de bem-estar e mensagens motivacionais. Quando aplicável por lei local, recomenda-se supervisão de responsáveis para menores de idade.
       </p>
     </section>
 
     <section>
-      <h2>11. Alterações desta Política</h2>
+      <h2>12. Alterações desta Política</h2>
       <p>
         Esta Política pode ser atualizada para refletir melhorias no app, exigências legais ou mudanças técnicas. A data da última atualização será sempre revisada no topo desta página.
       </p>
@@ -404,6 +693,54 @@
     <p class="footer">
       Positive Message - Política de Privacidade
     </p>
+    </div>
   </main>
+  <script>
+    // One page, both languages. Google Play wants a single privacy policy URL
+    // and the app links to a single address; keeping both versions in one file
+    // is the only reliable way to stop them drifting apart when one is edited
+    // and the other forgotten.
+    (function () {
+      var langs = ['en', 'pt'];
+      var titles = {en: 'Privacy Policy - Positive Message', pt: 'Política de Privacidade - Positive Message'};
+
+      function pick() {
+        var q = new URLSearchParams(location.search).get('lang');
+        if (langs.indexOf(q) >= 0) return q;          // the app asked for one
+        try {
+          var saved = localStorage.getItem('lang');    // a previous choice
+          if (langs.indexOf(saved) >= 0) return saved;
+        } catch (e) { /* private browsing */ }
+        return (navigator.language || 'en').toLowerCase().indexOf('pt') === 0
+          ? 'pt'
+          : 'en';                                      // fall back to the browser
+      }
+
+      function show(lang) {
+        langs.forEach(function (l) {
+          Array.prototype.forEach.call(
+            document.querySelectorAll('[data-lang="' + l + '"]'),
+            function (el) { el.classList.toggle('on', l === lang); });
+        });
+        Array.prototype.forEach.call(
+          document.querySelectorAll('.langbar button'),
+          function (b) {
+            b.setAttribute('aria-pressed', String(b.getAttribute('data-set') === lang));
+          });
+        document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+        document.title = titles[lang];
+        try { localStorage.setItem('lang', lang); } catch (e) {}
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        Array.prototype.forEach.call(
+          document.querySelectorAll('.langbar button'),
+          function (b) {
+            b.addEventListener('click', function () { show(b.getAttribute('data-set')); });
+          });
+        show(pick());
+      });
+    })();
+  </script>
 </body>
 </html>
