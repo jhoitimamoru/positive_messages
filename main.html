@@ -286,10 +286,10 @@
         stores and protects information. The app aims to deliver positive
         messages and a personalised experience on as little data as possible.
       </p>
-      <p class="meta">Last updated: 29 August 2026</p>
+      <p class="meta">Last updated: 3 September 2026</p>
       <div class="grid">
         <div class="kpi"><h3>Account</h3><p>No sign-up with e-mail or password.</p></div>
-        <div class="kpi"><h3>Identification</h3><p>An anonymous Firebase ID, for internal use.</p></div>
+        <div class="kpi"><h3>Ads</h3><p>Shown in the free version. Subscribing removes them.</p></div>
         <div class="kpi"><h3>Your control</h3><p>Turn off notifications and clear local data on the device.</p></div>
       </div>
     </div>
@@ -314,22 +314,16 @@
         </thead>
         <tbody>
           <tr>
-            <td>Anonymous technical identifier</td>
-            <td>Internal Firebase Authentication ID (anonymous)</td>
-            <td>Authorise the writing of aggregate statistics without requiring an account with personal data</td>
-            <td>Service delivery</td>
+            <td>Advertising identifier</td>
+            <td>Android Advertising ID or IDFA, IP address, device model, operating system, language and ad interactions</td>
+            <td>Serving ads through Google AdMob in the free version, capping repetition and measuring performance</td>
+            <td>Consent in Europe; legitimate interest elsewhere</td>
           </tr>
           <tr>
             <td>App preferences</td>
             <td>Language, theme, selected category, favourites, custom affirmations, reminder settings</td>
             <td>Personalisation and continuity of the experience on the same device</td>
             <td>Service delivery</td>
-          </tr>
-          <tr>
-            <td>Aggregate usage data</td>
-            <td>Counters for installs, completed onboarding, acquisition source, language, daily active users</td>
-            <td>Measuring app performance at an aggregate level</td>
-            <td>Legitimate interest</td>
           </tr>
           <tr>
             <td>Usage events and analytics identifier</td>
@@ -358,34 +352,65 @@
         favourites and preferences.</li>
         <li>During use, through internal events the app needs to function
         (for example, updating your daily streak).</li>
-        <li>Through the infrastructure services the app uses (anonymous
-        Firebase Authentication, Cloud Firestore and Google Analytics for
-        Firebase).</li>
+        <li>Through the services the app uses: Google Analytics for Firebase
+        and, in the free version, Google AdMob.</li>
       </ul>
       </section>
 
       <section>
-      <h2>4. Firebase and third-party providers</h2>
+      <h2>4. Advertising</h2>
       <p>
-        To run the app reliably and measure it technically, we use Google
-        Firebase services:
+        The free version shows ads served by <strong>Google AdMob</strong>, in
+        two formats: a sponsored card between affirmations, and a full screen
+        when you bring the app back to the foreground. Opening the app from a
+        reminder never shows one.
       </p>
-      <ul>
-        <li><strong>Firebase Authentication (anonymous):</strong> generates a
-        technical identifier for each installation of the app.</li>
-        <li><strong>Cloud Firestore:</strong> stores aggregate usage counters.
-        We keep no individual record of what any one person does in the
-        app.</li>
-        <li><strong>Google Analytics for Firebase:</strong> records usage
-        events (opens, screens, sharing, theme chosen) against an installation
-        identifier. We do not use this data for advertising, do not combine it
-        with advertising identifiers and do not share it with third parties.
-        The affirmations you write are never sent.</li>
-      </ul>
       <p>
-        We also translate on the device using embedded language models (ML Kit
-        on-device). These models may be downloaded so translation works
-        offline in your chosen language.
+        For this, AdMob and its advertising partners may access your device's
+        advertising identifier, IP address, device model, operating system,
+        language and your interactions with the ad. This data is handled by
+        Google and its partners under their own policies, and may be used to
+        serve personalised ads, cap repetition and measure performance. See
+        <a href="https://policies.google.com/technologies/partner-sites">how
+        Google uses data from partner sites</a>.
+      </p>
+      <p class="note">
+        <strong>Subscribing removes the ads.</strong> For subscribers the app
+        neither loads nor shows any ad, and nothing is sent to AdMob.
+      </p>
+      <h2 style="margin-top:26px">Consent in Europe</h2>
+      <p>
+        If you are in the European Economic Area, the United Kingdom or
+        Switzerland, the app asks for your consent before showing any ad, using
+        Google's User Messaging Platform. You can accept, refuse, or choose
+        purpose by purpose. Refusing does not block the app — it only makes the
+        ads non-personalised. You can change your choice at any time from the
+        app's privacy menu.
+      </p>
+      <h2 style="margin-top:26px">How to limit ads</h2>
+      <ul>
+        <li><strong>Android:</strong> Settings &rsaquo; Google &rsaquo; Ads
+        &rsaquo; delete or reset your advertising ID</li>
+        <li><strong>iOS:</strong> Settings &rsaquo; Privacy &amp; Security
+        &rsaquo; Tracking</li>
+      </ul>
+      </section>
+
+      <section>
+      <h2>4b. Analytics</h2>
+      <p>
+        <strong>Google Analytics for Firebase</strong> records usage events
+        (opens, screens visited, theme and category chosen, sharing, the steps
+        of a subscription) against an installation identifier. There is no
+        individual record: no document, no row, no per-person profile.
+        <strong>The text of your favourites and of the affirmations you write
+        is never sent.</strong>
+      </p>
+      <p class="note">
+        Until August 2026 the app also kept aggregate counters in Cloud
+        Firestore and signed in anonymously through Firebase Authentication,
+        and it translated on the device with ML Kit. <strong>All three were
+        removed</strong> and exist in no published version.
       </p>
       <p>
         Data may be processed on those providers' global infrastructure under
@@ -454,14 +479,17 @@
       <ul>
         <li><strong>On the device:</strong> preferences and local content
         remain until you clear the app's data or uninstall it.</li>
-        <li><strong>In the cloud:</strong> technical and aggregate data may be
-        kept for operational continuity and statistical history.</li>
+        <li><strong>Analytics:</strong> events are retained for the period
+        configured in Google Analytics and can be stopped at any time by
+        uninstalling the app or clearing its data.</li>
+        <li><strong>Advertising:</strong> retention is Google's and its
+        partners', under their own policies. Resetting your advertising
+        identifier breaks the link with everything collected before it.</li>
       </ul>
       <p>
-        The cloud counters are aggregate and hold no individual record, so
-        there is no profile of you to locate or delete. Google Analytics events
-        are retained for the period configured in the service and can be
-        stopped at any time by uninstalling the app or clearing its data.
+        We keep no server and no individual record, so there is no profile of
+        yours to locate or delete on our side. Subscribing stops the ads
+        entirely.
       </p>
       </section>
 
@@ -485,6 +513,11 @@
         <li>Support and privacy e-mail:
         <a href="mailto:jhoitimamoru@gmail.com">jhoitimamoru@gmail.com</a></li>
       </ul>
+      <p>
+        If you are in Europe (GDPR) or Brazil (LGPD) and want to exercise
+        rights of access, correction, portability or deletion, write to the
+        address above. We reply within 30 days.
+      </p>
       <p>
         To help us look into it, please include the app version, the platform
         (Android or iOS) and details of your request.
@@ -517,15 +550,15 @@
         Esta Política descreve como o aplicativo Positive Message coleta, usa, armazena e protege informações.
         O foco do app é entregar mensagens positivas e uma experiência personalizada com o mínimo possível de dados.
       </p>
-      <div class="meta">Última atualização: 29 de agosto de 2026</div>
+      <div class="meta">Última atualização: 3 de setembro de 2026</div>
       <div class="grid">
         <article class="kpi">
           <h3>Conta</h3>
           <p>Não exige cadastro com e-mail ou senha.</p>
         </article>
         <article class="kpi">
-          <h3>Identificação</h3>
-          <p>Usa ID anônimo do Firebase para funcionamento interno.</p>
+          <h3>Anúncios</h3>
+          <p>Exibidos na versão gratuita. A assinatura remove todos.</p>
         </article>
         <article class="kpi">
           <h3>Controle do usuário</h3>
@@ -554,22 +587,16 @@
         </thead>
         <tbody>
           <tr>
-            <td>Identificador técnico anônimo</td>
-            <td>ID interno do Firebase Authentication (anônimo)</td>
-            <td>Autorizar a gravação das estatísticas agregadas sem exigir conta com dados pessoais</td>
-            <td>Execução do serviço</td>
+            <td>Identificador de publicidade</td>
+            <td>Android Advertising ID ou IDFA, endereço IP, modelo do aparelho, sistema operacional, idioma e interações com o anúncio</td>
+            <td>Exibir anúncios pelo Google AdMob na versão gratuita, limitar repetição e medir desempenho</td>
+            <td>Consentimento na Europa; interesse legítimo nos demais países</td>
           </tr>
           <tr>
             <td>Preferências do app</td>
             <td>Idioma, tema, categoria selecionada, favoritos, mensagens customizadas, configuração de lembretes</td>
             <td>Personalização e continuidade da experiência no mesmo aparelho</td>
             <td>Execução do serviço</td>
-          </tr>
-          <tr>
-            <td>Dados de uso agregados</td>
-            <td>Contadores de instalações, onboarding concluído, origem de aquisição, idioma, usuários ativos por dia</td>
-            <td>Medição de desempenho do aplicativo em nível agregado</td>
-            <td>Interesse legítimo do operador</td>
           </tr>
           <tr>
             <td>Eventos de uso e identificador de análise</td>
@@ -595,23 +622,69 @@
       <ul>
         <li>Diretamente no dispositivo, quando você escolhe tema, idioma, favoritos e preferências.</li>
         <li>Durante o uso, por meio de eventos internos necessários para funcionamento (ex.: atualização de sequência diária).</li>
-        <li>Por serviços de infraestrutura usados no app (Firebase Authentication anônimo, Cloud Firestore e Google Analytics para Firebase).</li>
+        <li>Pelos serviços que o app usa: Google Analytics para Firebase e, na versão gratuita, Google AdMob.</li>
       </ul>
     </section>
 
     <section>
-      <h2>4. Uso de Firebase e provedores terceiros</h2>
-      <p>Para operar o app com estabilidade e métricas técnicas, utilizamos serviços do Google Firebase:</p>
-      <ul>
-        <li><strong>Firebase Authentication (anônimo):</strong> gera um identificador técnico para cada instalação do app.</li>
-        <li><strong>Cloud Firestore:</strong> armazena contadores agregados de uso. Não guardamos registro individual do que cada pessoa faz no app.</li>
-        <li><strong>Google Analytics para Firebase:</strong> registra eventos de uso (abertura, telas, compartilhamento, tema escolhido) associados a um identificador de instalação. Não usamos esses dados para publicidade, não os cruzamos com identificadores de anúncio e não os compartilhamos com terceiros. O conteúdo das afirmações que você escreve nunca é enviado.</li>
-      </ul>
+      <h2>4. Publicidade</h2>
       <p>
-        Também utilizamos tradução local no aparelho com modelos de linguagem embarcados (ML Kit on-device). Esses modelos podem ser baixados para funcionamento offline da tradução no idioma escolhido.
+        A versão gratuita exibe anúncios fornecidos pelo <strong>Google
+        AdMob</strong>, em dois formatos: um card patrocinado entre as
+        afirmações e uma tela de anúncio ao voltar para o app. Abrir o app por
+        um lembrete nunca exibe anúncio.
       </p>
       <p>
-        Os dados podem ser processados em infraestrutura global desses provedores conforme seus termos e políticas.
+        Para isso, o AdMob e seus parceiros de publicidade podem acessar o
+        identificador de publicidade do aparelho, endereço IP, modelo do
+        aparelho, sistema operacional, idioma e suas interações com o anúncio.
+        Esses dados são tratados pelo Google e por seus parceiros sob as
+        políticas deles, e podem ser usados para exibir anúncios
+        personalizados, limitar repetição e medir desempenho. Consulte
+        <a href="https://policies.google.com/technologies/partner-sites">como o
+        Google usa dados de sites parceiros</a>.
+      </p>
+      <p class="note">
+        <strong>A assinatura remove os anúncios.</strong> Para quem assina, o
+        app não carrega nem exibe anúncio nenhum, e nada é enviado ao AdMob.
+      </p>
+      <h2 style="margin-top:26px">Consentimento na Europa</h2>
+      <p>
+        Se você está no Espaço Econômico Europeu, no Reino Unido ou na Suíça, o
+        app pede seu consentimento antes de exibir qualquer anúncio, usando a
+        plataforma de mensagens do Google. Você pode aceitar, recusar ou
+        escolher finalidade por finalidade. Recusar não bloqueia o app — apenas
+        faz os anúncios deixarem de ser personalizados. Você pode refazer a
+        escolha a qualquer momento pelo menu de privacidade do app.
+      </p>
+      <h2 style="margin-top:26px">Como limitar os anúncios</h2>
+      <ul>
+        <li><strong>Android:</strong> Configurações &rsaquo; Google &rsaquo;
+        Anúncios &rsaquo; excluir ou redefinir o ID de publicidade</li>
+        <li><strong>iOS:</strong> Ajustes &rsaquo; Privacidade e Segurança
+        &rsaquo; Rastreamento</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4b. Métricas de uso</h2>
+      <p>
+        O <strong>Google Analytics para Firebase</strong> registra eventos de
+        uso (abertura, telas visitadas, tema e categoria escolhidos,
+        compartilhamento, etapas da assinatura) associados a um identificador
+        de instalação. Não existe registro individual: nenhum documento,
+        nenhuma linha, nenhum perfil por pessoa. <strong>O texto das suas
+        afirmações favoritas e das que você escreve nunca é enviado.</strong>
+      </p>
+      <p class="note">
+        Até agosto de 2026 o app também mantinha contadores agregados no Cloud
+        Firestore, fazia login anônimo pelo Firebase Authentication e traduzia
+        no aparelho com o ML Kit. <strong>Os três foram removidos</strong> e
+        não existem em nenhuma versão publicada.
+      </p>
+      <p>
+        Os dados podem ser processados em infraestrutura global desses
+        provedores conforme seus termos e políticas.
       </p>
     </section>
 
@@ -673,10 +746,11 @@
       <h2>8. Retenção e descarte</h2>
       <ul>
         <li><strong>No dispositivo:</strong> preferências e conteúdo local permanecem até você limpar os dados do app ou desinstalar.</li>
-        <li><strong>Na nuvem:</strong> dados técnicos e agregados podem permanecer para continuidade operacional e histórico estatístico.</li>
+        <li><strong>Métricas:</strong> os eventos são retidos pelo prazo configurado no Google Analytics e podem ser interrompidos a qualquer momento desinstalando o app ou limpando os dados dele.</li>
+        <li><strong>Publicidade:</strong> a retenção é do Google e de seus parceiros, sob as políticas deles. Redefinir seu identificador de publicidade rompe o vínculo com tudo o que foi coletado antes.</li>
       </ul>
       <p>
-        Os contadores na nuvem são agregados e não guardam registro individual, então não há um perfil seu a ser localizado ou excluído. Os eventos do Google Analytics são retidos pelo prazo configurado no serviço e podem ser interrompidos a qualquer momento desinstalando o app ou limpando os dados dele.
+        Não mantemos servidor nem registro individual, então não há um perfil seu a ser localizado ou excluído do nosso lado. A assinatura interrompe os anúncios por completo.
       </p>
     </section>
 
@@ -695,6 +769,11 @@
       <ul>
         <li>E-mail de suporte/privacidade: <strong>jhoitimamoru@gmail.com</strong></li>
       </ul>
+      <p>
+        Se você está na Europa (GDPR) ou no Brasil (LGPD) e quer exercer
+        direitos de acesso, correção, portabilidade ou exclusão, escreva para o
+        endereço acima. Respondemos em até 30 dias.
+      </p>
       <p>
         Para ajudar na análise, inclua no contato: versão do app, plataforma (Android ou iOS) e detalhes do pedido.
       </p>
